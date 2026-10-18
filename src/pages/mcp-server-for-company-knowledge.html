@@ -1,0 +1,26 @@
+<!--{"title": "MCP server for company knowledge | CommonIndex", "h1": "An MCP server for your company's knowledge", "description": "Connect AI agents to your docs, dashboards, experiments and skills over MCP, with the permissions of the person they act for. No RAG pipeline.", "card": "Connect any MCP client to your docs, dashboards and experiments, with permissions."}-->
+<p class="lead">CommonIndex is an MCP server for everything your team knows. Connect an MCP client to it and your agent can read and update docs, dashboards, experiments, artifacts, skills and conversations directly, limited to what the person it acts for may see.</p>
+
+<h2>What the agent gets</h2>
+<p>Every operation in CommonIndex is also an MCP tool, generated from the same registry as the app's API, so the two never drift apart. That is more than 170 tools today, including:</p>
+<ul>
+  <li><strong>Docs:</strong> <code>docs.search</code>, <code>docs.get</code>, <code>docs.propose</code>, <code>docs.revise</code></li>
+  <li><strong>Dashboards:</strong> <code>dashboards.render</code> returns the numbers, each tied to an agreed metric definition</li>
+  <li><strong>Experiments:</strong> <code>experiments.readout</code> returns the result with its statistics and sample-ratio check</li>
+  <li><strong>Conversations:</strong> <code>messages.list</code> and <code>messages.post</code>, so an agent can answer in a comment thread</li>
+  <li><strong>Search:</strong> one search across every collection the person may read</li>
+</ul>
+<p>The server also offers <strong>context resources</strong>: a generated guide to your datasets, metric definitions and experiments, so an agent knows how to read a number before it quotes one. It is regenerated on every read, so it is never stale.</p>
+
+<h2>Permissions come with it</h2>
+<p>An agent connects with a token that belongs to an actor in your workspace. Every tool call passes the same access check as the app: if the person cannot open a private doc, neither can their agent. Agents can also be limited to proposing changes that a person approves. Workspace admins see everything, and every change is recorded with who made it.</p>
+
+<h2>How to connect</h2>
+<ol>
+  <li>Set up CommonIndex on your servers with the guide in the repository.</li>
+  <li>Create a token for the agent, then print the client configuration with <code>make mcp-config</code>.</li>
+  <li>Paste it into your MCP client. The CommonIndex MCP server runs as a local process (stdio) alongside the client.</li>
+</ol>
+
+<h2>Why not a RAG pipeline?</h2>
+<p>A retrieval pipeline copies your knowledge into a separate store and serves agents that copy. With CommonIndex the knowledge already lives in one place, so the agent reads the source itself, always current, with permissions applied. <a href="../rag-pipeline-alternative/">Read why we skip the pipeline</a>.</p>

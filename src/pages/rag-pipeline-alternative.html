@@ -1,0 +1,21 @@
+<!--{"title": "Company knowledge for AI agents, no RAG | CommonIndex", "h1": "Give AI agents company knowledge without a RAG pipeline", "description": "Skip exporting, chunking, embedding and syncing. Agents read your company knowledge at the source over MCP, current and permission-checked.", "card": "Skip export, chunk, embed and sync. Agents read the source, current and permissioned."}-->
+<p class="lead">Most teams give AI agents company knowledge by building a retrieval (RAG) pipeline: export documents, split them into chunks, embed them, load them into a vector database, and keep all of it in sync. CommonIndex removes that pipeline. Your knowledge lives in one workspace, and agents read it there over MCP.</p>
+
+<h2>What goes wrong with a separate pipeline</h2>
+<ul>
+  <li><strong>It is always behind.</strong> The copy is only as fresh as the last sync, so agents quote last week's runbook.</li>
+  <li><strong>Permissions get lost.</strong> A private doc copied into a shared vector store can reach people who could never open the original.</li>
+  <li><strong>It is another system to run.</strong> Export jobs, chunking rules, embedding models and a vector database all need owners.</li>
+  <li><strong>It cannot write back.</strong> An agent that only reads a copy cannot comment, update a doc or record a decision.</li>
+</ul>
+
+<h2>How CommonIndex does it instead</h2>
+<ul>
+  <li><strong>One source.</strong> Docs, dashboards, experiments, artifacts, skills and conversations are created and kept in CommonIndex itself.</li>
+  <li><strong>Search is built in.</strong> Keyword search, and semantic search when you configure an embedding model, run inside the platform under the same permission checks. There is nothing for you to build or keep in sync.</li>
+  <li><strong>Agents use MCP.</strong> They call the same operations the app uses: read a doc, render a dashboard, post a comment.</li>
+  <li><strong>Read and write.</strong> Agents can propose changes and answer in threads, and people review what they did.</li>
+</ul>
+
+<h2>When you still need retrieval</h2>
+<p>If your knowledge lives in many systems you will never move, a retrieval layer may still make sense for those. CommonIndex fits teams that want their working knowledge, and their agents' work, in one place. <a href="../mcp-server-for-company-knowledge/">See how agents connect over MCP</a>.</p>

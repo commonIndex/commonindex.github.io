@@ -1,0 +1,29 @@
+# CommonIndex
+
+> Agentic platform for team collaboration: docs, dashboards, experiments, skills and agents in one place. Agents use MCP with your permissions. No RAG.
+
+CommonIndex is a self-hosted agentic platform for team collaboration. Docs, artifacts, dashboards, experiments, skills, agents and conversations live in one workspace. People use the web app; AI agents connect over MCP (the Model Context Protocol), where every operation is a tool, more than 170 in all. Agents act with the permissions of the person they work for; admins can see everything; every action is recorded. There is no RAG pipeline: agents read the source directly. Licence: source-available (free for internal use in any organization and for noncommercial use; only CommonIndex may sell it).
+
+## Guides
+
+- [AI agents with the same permissions as people](https://commonindex.github.io/ai-agents-with-permissions/): Agents are members: own tokens, the same access checks, every action recorded.
+- [An MCP server for your company's knowledge](https://commonindex.github.io/mcp-server-for-company-knowledge/): Connect any MCP client to your docs, dashboards and experiments, with permissions.
+- [Give AI agents company knowledge without a RAG pipeline](https://commonindex.github.io/rag-pipeline-alternative/): Skip export, chunk, embed and sync. Agents read the source, current and permissioned.
+- [A self-hosted workspace for teams and their AI agents](https://commonindex.github.io/self-hosted-ai-workspace/): On your servers, with any AI model, single sign-on and your own storage bucket.
+- [Team collaboration where AI agents work alongside people](https://commonindex.github.io/team-collaboration-with-ai-agents/): Channels, comments on anything, tasks and reviews, with agents as teammates.
+
+## Questions
+
+- **What is CommonIndex?** CommonIndex is an agentic platform for team collaboration. Docs, artifacts, dashboards, experiments, skills, agents and conversations live in one self-hosted workspace. People work in the app, AI agents work over MCP, and both use the same permissions.
+- **How do AI agents connect to CommonIndex?** Over MCP (the Model Context Protocol). Every operation in CommonIndex is also an MCP tool, more than 170 of them, so an agent can read docs, render dashboards, read experiment results and post comments.
+- **Do I need a RAG pipeline or a vector database?** No. Your knowledge already lives in CommonIndex, so agents read it at the source over MCP. Search is built in and runs under the same permission checks, so there is no export, chunking or sync job to run.
+- **Can an agent see everything in the workspace?** No. An agent acts with the permissions of the person it works for, and can be limited to proposing changes for a person to approve. Workspace admins can see and manage everything, and every action is recorded.
+- **Where is my data stored?** On your own servers. CommonIndex is self-hosted: everything is kept in your database, and media files stay on local disk or in your own S3 or Google Cloud Storage bucket.
+- **Which AI models does it work with?** Any OpenAI-compatible endpoint, Anthropic, or a local model through Ollama. CommonIndex holds no model key of its own, and most features work without a model.
+- **Can the team comment and collaborate?** Yes. There are channels and threads, and comments on any doc, dashboard, experiment, artifact or skill. Share any item with people by email or with the whole workspace, and @mention people and agents so everyone works from the same context. Agents read and answer in the same threads.
+- **Can I add my own collections?** Yes. Describe a collection in one definition file and it gets API and MCP tools, search, permissions and comments, like the built-in ones.
+- **Is CommonIndex open source?** It is source-available. Any organization may use and self-host it for free for its internal operations, and anyone may use it for noncommercial purposes, under the PolyForm Internal Use or Noncommercial license. Selling it or hosting it for others needs a commercial license from CommonIndex.
+
+## Code
+
+- [Repository](https://github.com/commonindex/commonindex)
