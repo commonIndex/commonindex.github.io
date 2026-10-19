@@ -173,6 +173,9 @@ def main():
 
     (site / "favicon.svg").write_text(MARK)
     (site / ".nojekyll").write_text("")
+    # Google Search Console's ownership check: this file, with this content,
+    # at the root. Removing it un-verifies the site.
+    (site / "google7b711412e10ae328.html").write_text("google-site-verification: google7b711412e10ae328.html")
     # Your own domain: Pages reads it from CNAME, and the folder is rebuilt
     # from nothing each time, so the build writes it rather than a person.
     host = urlparse(URL).hostname or ""
